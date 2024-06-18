@@ -2,11 +2,7 @@
 
 Command-Line Interface for CodeNotes VSCode Extension
 
-# Usage
 
-```
-cargo run
-```
 
 # Note Types
 
