@@ -32,26 +32,26 @@ codenotes init --path /path/to/your/project
 ### Adding a folder note
 
 ```sh
-codenotes notes folder add --note "This is a folder note" --directory /path/to/directory
+codenotes add note --folder --message "This is a folder note" --directory /path/to/directory
 ```
 
 
-### Deleting a folder note
+### Deleting a note
 
 ```sh
-codenotes notes folder delete --note-id 01ARZ3NDEKTSV4RRFFQ69G5FAV
+codenotes delete note 01ARZ3NDEKTSV4RRFFQ69G5FAV
 ```
 
 ### Updating a  folder note
 
 ```sh
-codenotes notes folder update --note-id 01ARZ3NDEKTSV4RRFFQ69G5FAV --note "This is an updated note"
+codenotes update note 01ARZ3NDEKTSV4RRFFQ69G5FAV --message "This is an updated note"
 ```
 
 ### Getting a single note
 
 ```sh
-codenotes notes folder get --note-id 01ARZ3NDEKTSV4RRFFQ69G5FAV
+codenotes get note 01ARZ3NDEKTSV4RRFFQ69G5FAV
 ```
 
 ## Line Notes API
@@ -59,16 +59,16 @@ codenotes notes folder get --note-id 01ARZ3NDEKTSV4RRFFQ69G5FAV
 ### Adding a line note
 
 ```sh
-codenotes notes line add --note "This is a line note" --number 10 --directory /path/to/file
+codenotes add note --line --message "This is a line note" --line-no 10 --directory /path/to/file
 ```
 
 ## Adding a sticky line note
 
 ```sh
-codenotes notes line add --note "This is a line note" --number 10 --sticky --directory /path/to/file
+codenotes add note --line --message "This is a line note" --line-no 10 --sticky --directory /path/to/file
 ```
 
-# Reminders API
+# Reminders API - TODO
 
 ## Putting a reminder on a folder note
 
