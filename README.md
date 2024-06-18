@@ -3,7 +3,6 @@
 Command-Line Interface for CodeNotes VSCode Extension
 
 
-
 # Note Types
 
 1. Folder notes
@@ -17,18 +16,36 @@ codenotes init
 ```
 
 ```sh
-codenotes init --path /path/to/your/project
+codenotes init --directory /path/to/your/project
 
 ```
 
 # Notes API
 
-## Folder Notes API
 
 ### Adding a folder note
 
 ```sh
-codenotes add note --folder --message "This is a folder note" --directory /path/to/directory
+codenotes add note --message "This is a folder note" --directory /path/to/directory
+```
+
+### Adding a file note
+
+```sh
+codenotes add note --message "This is a file note" --file /path/to/file
+```
+
+### Adding a line note
+
+```sh
+codenotes add note --line --message "This is a line note" --line-no 10 --file /path/to/file
+```
+
+
+## Adding a sticky line note
+
+```sh
+codenotes add note --message "This is a line note" --line-no 10 --sticky --directory /path/to/file
 ```
 
 
@@ -38,7 +55,7 @@ codenotes add note --folder --message "This is a folder note" --directory /path/
 codenotes delete note 01ARZ3NDEKTSV4RRFFQ69G5FAV
 ```
 
-### Updating a  folder note
+### Updating a folder note
 
 ```sh
 codenotes update note 01ARZ3NDEKTSV4RRFFQ69G5FAV --message "This is an updated note"
@@ -50,25 +67,7 @@ codenotes update note 01ARZ3NDEKTSV4RRFFQ69G5FAV --message "This is an updated n
 codenotes get note 01ARZ3NDEKTSV4RRFFQ69G5FAV
 ```
 
-## Line Notes API
-
-### Adding a line note
-
-```sh
-codenotes add note --line --message "This is a line note" --line-no 10 --directory /path/to/file
-```
-
-## Adding a sticky line note
-
-```sh
-codenotes add note --line --message "This is a line note" --line-no 10 --sticky --directory /path/to/file
-```
 
 # Reminders API - TODO
 
-## Putting a reminder on a folder note
-
-```
-```
-
-## Putting a reminder on a line note
+## Putting a reminder on a note

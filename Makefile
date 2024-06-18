@@ -1,4 +1,4 @@
 dev:
-	go run ./cmd/cli/main.go
+	go run ./cmd/main.go
 build:
-	go build -o bin/codenotes cmd/cli/main.go
+	go build -o bin/codenotes cmd/main.go
