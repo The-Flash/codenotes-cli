@@ -2,6 +2,7 @@ package notes
 
 import (
 	"errors"
+	"fmt"
 	"io/fs"
 	"os"
 	"path"
@@ -18,6 +19,12 @@ const (
 // necessary for a codenotes project
 func InitializeProject(directory string) (string, error) {
 	return createProject(directory)
+}
+
+// AddNote adds notes to the repo
+func AddNote(nc *noteConfig) (string, error) {
+	fmt.Println(nc)
+	return "", nil
 }
 
 // GetProject get the closest codenotes projects.
